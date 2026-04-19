@@ -1,0 +1,70 @@
+{
+  "name": "payload-cms-vercel-supabase-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/next-runner.mjs dev",
+    "build": "next build",
+    "start": "node scripts/next-runner.mjs start",
+    "lint": "eslint",
+    "generate:types": "node --require ./scripts/preload-env.cjs --import tsx scripts/generate-payload-artifacts.ts --types",
+    "generate:importmap": "node --require ./scripts/preload-env.cjs --import tsx scripts/generate-payload-artifacts.ts --importmap",
+    "seed": "node --require ./scripts/preload-env.cjs --import tsx src/seed.ts",
+    "migrate:create": "node --require ./scripts/preload-env.cjs --import tsx ./node_modules/payload/bin.js migrate:create",
+    "migrate": "node --require ./scripts/preload-env.cjs --import tsx ./node_modules/payload/bin.js migrate",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:install": "playwright install",
+    "node:lts": "powershell -ExecutionPolicy Bypass -File scripts/node-lts.ps1"
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "3.83.0",
+    "@payloadcms/live-preview-react": "3.83.0",
+    "@payloadcms/next": "3.83.0",
+    "@payloadcms/plugin-nested-docs": "3.83.0",
+    "@payloadcms/plugin-redirects": "3.83.0",
+    "@payloadcms/plugin-search": "3.83.0",
+    "@payloadcms/plugin-seo": "3.83.0",
+    "@payloadcms/richtext-lexical": "3.83.0",
+    "@payloadcms/storage-s3": "3.83.0",
+    "@payloadcms/ui": "3.83.0",
+    "@radix-ui/react-slot": "1.2.4",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "cross-env": "10.1.0",
+    "dotenv": "17.4.2",
+    "embla-carousel-autoplay": "8.6.0",
+    "embla-carousel-react": "8.6.0",
+    "graphql": "16.13.2",
+    "lucide-react": "1.8.0",
+    "next": "16.2.4",
+    "payload": "3.83.0",
+    "qrcode": "1.5.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "resend": "6.12.0",
+    "sharp": "0.34.5",
+    "tailwind-merge": "3.5.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.59.1",
+    "@tailwindcss/postcss": "4.2.2",
+    "@types/node": "24.12.2",
+    "@types/qrcode": "1.5.6",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "4.2.2",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=24.14.1 <25"
+  },
+  "overrides": {
+    "monaco-editor": {
+      "dompurify": "3.4.0"
+    },
+    "esbuild": "0.27.7"
+  }
+}
