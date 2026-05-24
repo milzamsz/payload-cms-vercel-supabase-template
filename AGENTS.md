@@ -4,7 +4,9 @@ Guidance for AI agents working in this starter template. Read this before editin
 
 ## What this project is
 
-A **starter template**. Not a live business. Do not introduce client-specific brand names, real email addresses, real phone numbers, real domain names, or real logos. Generic placeholder values (`Northstar IT Services`, `hello@northstar.example.com`, `+1 (555) 010-4102`) are intentional.
+A **starter template** built on Payload CMS 3.84, Next.js 16.2, React 19.2, Tailwind CSS 4.3, and Supabase (Postgres + Storage). Not a live business. Do not introduce client-specific brand names, real email addresses, real phone numbers, real domain names, or real logos. Generic placeholder values (`Northstar IT Services`, `hello@northstar.example.com`, `+1 (555) 010-4102`) are intentional.
+
+Runtime: Node `>=24.14.1 <26`. TypeScript 6.0.
 
 ## Secrets hygiene
 
@@ -58,7 +60,7 @@ Swap Unsplash placeholder URLs for real assets (hosted in Supabase Storage) befo
 
 ## Testing
 
-The Playwright suite covers public routes, the admin login + 2FA shell, Payload REST API availability, and contact form submission. Run with `npm run test:e2e` against a running dev server. Prefer fixing regressions over adding broad skip lists.
+The Playwright 1.60 suite covers public routes, the admin login + 2FA shell, Payload REST API availability, and contact form submission. Run with `npm run test:e2e` against a running dev server. Prefer fixing regressions over adding broad skip lists.
 
 ## Commit style
 

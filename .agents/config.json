@@ -1,0 +1,67 @@
+{
+  "name": "payload-cms-vercel-supabase-template",
+  "description": "AI agent configuration for the Payload CMS + Vercel + Supabase B2B starter template",
+  "version": "1.0.0",
+  "runtime": {
+    "node": ">=24.14.1 <26",
+    "packageManager": "npm"
+  },
+  "stack": {
+    "framework": "next@16.2.6",
+    "cms": "payload@3.84.1",
+    "database": "@payloadcms/db-postgres",
+    "storage": "@payloadcms/storage-s3",
+    "email": "resend@6.12.3",
+    "ui": ["react@19.2.6", "tailwindcss@4.3.0", "lucide-react@1.16.0"],
+    "testing": "@playwright/test@1.60.0",
+    "language": "typescript@6.0.3"
+  },
+  "commands": {
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "lint": "npm run lint",
+    "test": "npm run test:e2e",
+    "generateTypes": "npm run generate:types",
+    "generateImportmap": "npm run generate:importmap",
+    "seed": "npm run seed",
+    "migrate": "npm run migrate"
+  },
+  "paths": {
+    "frontend": "src/app/(frontend)",
+    "payload": "src/app/(payload)",
+    "collections": "src/collections",
+    "globals": "src/globals",
+    "blocks": "src/blocks",
+    "components": "src/components",
+    "utilities": "src/utilities",
+    "content": "src/lib/it-services-content.ts",
+    "payloadConfig": "src/payload.config.ts",
+    "types": "src/payload-types.ts",
+    "tests": "tests/e2e",
+    "migrations": "src/migrations"
+  },
+  "constraints": {
+    "doNotModifyWithoutInstruction": [
+      "src/access/*",
+      "src/collections/*",
+      "src/globals/*",
+      "src/migrations/*",
+      "src/payload.config.ts"
+    ],
+    "regenerateAfterSchemaChange": [
+      "npm run generate:types",
+      "npm run generate:importmap"
+    ],
+    "neverCommit": [
+      ".env",
+      ".env.local",
+      ".env.*.local",
+      ".env.vercel.local",
+      ".vercel/",
+      ".next/",
+      "node_modules/",
+      "test-results/",
+      "playwright-report/"
+    ]
+  }
+}

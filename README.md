@@ -2,19 +2,22 @@
 
 A neutral B2B starter template for IT service businesses. Ships as **Northstar IT Services** — a reusable placeholder brand — with a full stack of Payload CMS 3, Next.js 16, Supabase Postgres, Supabase Storage (S3-compatible), Resend email, 2FA, and Playwright e2e tests. Frontend pages render from hardcoded template content first so you can vibe-code your copy, then sync into Payload CMS when you are ready.
 
+> **Last dependency update:** May 2026 — all packages at latest stable.
+
 ## Stack
 
 | Layer | Choice |
 | --- | --- |
-| Framework | Next.js `16.2.4` (App Router, RSC) |
-| CMS | Payload `3.83.0` (Postgres, Lexical rich text) |
+| Framework | Next.js `16.2.6` (App Router, RSC) |
+| CMS | Payload `3.84.1` (Postgres, Lexical rich text) |
 | Database | Supabase Postgres via `@payloadcms/db-postgres` |
 | Storage | Supabase Storage through `@payloadcms/storage-s3` |
-| Email | Resend + Payload email adapter |
-| UI | React `19.2.5`, Tailwind `4`, `@radix-ui/react-slot`, `lucide-react` |
+| Email | Resend `6.12.3` + Payload email adapter |
+| UI | React `19.2.6`, Tailwind CSS `4.3`, `@radix-ui/react-slot`, `lucide-react` |
 | Auth | Payload users + TOTP/email 2FA in `/admin-login` |
-| Tests | Playwright `1.59` (public routes, admin, CMS API, contact form) |
-| Runtime | Node `>=24.14.1 <25` |
+| Tests | Playwright `1.60` (public routes, admin, CMS API, contact form) |
+| TypeScript | `6.0.3` |
+| Runtime | Node `>=24.14.1 <26` |
 
 ## Quick start
 
